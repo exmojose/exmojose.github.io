@@ -2,7 +2,7 @@
 title: "Whoami"
 icon: fas fa-user-shield
 order: 1
-hero: false   # <- desactiva la cabecera automática de Chirpy
+hero: false
 ---
 
 <div class="hero-container">
@@ -19,11 +19,11 @@ hero: false   # <- desactiva la cabecera automática de Chirpy
 
     <div class="certifications">
       <h2>🎓 Certificaciones</h2>
-      <ul>
-        <li>eJPT</li>
-        <li>eWPT</li>
-        <li>eCPPT</li>
-      </ul>
+      <div class="cert-images">
+        <img src="/assets/img/ejpt.png" alt="eJPT" title="eJPT">
+        <img src="/assets/img/ewpt.png" alt="eWPT" title="eWPT">
+        <img src="/assets/img/ecppt.png" alt="eCPPT" title="eCPPT">
+      </div>
     </div>
 
     <p class="description">
@@ -73,24 +73,25 @@ hero: false   # <- desactiva la cabecera automática de Chirpy
 }
 
 .certifications h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
-.certifications ul {
-  list-style: none;
-  padding: 0;
+.cert-images {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 2rem;
   margin-bottom: 1.5rem;
 }
 
-.certifications li {
-  background: #f0f0f0;
-  padding: 0.5rem 1rem;
+.cert-images img {
+  width: 120px;
+  height: auto;
   border-radius: 12px;
-  font-weight: bold;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.cert-images img:hover {
+  transform: scale(1.05);
 }
 
 .description {
@@ -105,8 +106,8 @@ hero: false   # <- desactiva la cabecera automática de Chirpy
   margin: 0 0.5rem;
   transition: color 0.2s;
 }
-
 .contact a:hover {
   color: #005582;
 }
 </style>
+
