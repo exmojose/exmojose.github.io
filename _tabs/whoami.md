@@ -1,6 +1,6 @@
 ---
 # the default layout is 'page'
-title: "Sobre mí"
+title: "Whoami"
 icon: fas fa-user
 order: 1
 ---
