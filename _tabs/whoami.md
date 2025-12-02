@@ -20,9 +20,9 @@ hero: false
     <div class="certifications">
       <h2>🎓 Certificaciones</h2>
       <div class="cert-images">
-        <img src="/assets/img/ejpt.png" alt="eJPT" title="eJPT">
-        <img src="/assets/img/ewpt.png" alt="eWPT" title="eWPT">
-        <img src="/assets/img/ecppt.png" alt="eCPPT" title="eCPPT">
+        <img src="/assets/img/avatar.jpg" alt="eJPT" title="eJPT">
+        <img src="/assets/img/avatar.jpg" alt="eWPT" title="eWPT">
+        <img src="/assets/img/avatar.jpg" alt="eCPPT" title="eCPPT">
       </div>
     </div>
 
