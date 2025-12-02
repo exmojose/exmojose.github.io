@@ -1,5 +1,5 @@
 ---
-title: "Sobre mí"
+title: "Whoami"
 icon: fas fa-user-shield
 order: 1
 ---
@@ -38,16 +38,12 @@ order: 1
 </div>
 
 <!-- Bloque tipo terminal estilo ciberseguridad -->
-## 🛡️ WhoAmI – Cyber Edition
 
 ```bash
 $ id exmojose
 uid=1001(exmojose) gid=1001(security) groups=1001(security),1002(pentest),1003(devops)
 home=/home/exmojose shell=/bin/bash
-roles=cybersecurity_enthusiast, penetration_tester, ethical_hacker
-skills="Python, Bash, Networking, Pentesting, Kali Linux, Wireshark, Metasploit"
-certifications="CEH, OSCP"
-status="Always learning & hacking responsibly 🚀"
-location="España, Madrid"
+```
+
 
 
