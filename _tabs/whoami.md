@@ -1,9 +1,10 @@
 ---
-title: "Whoami"
-icon: fas fa-user
+title: "Sobre mí"
+icon: fas fa-user-shield
 order: 1
 ---
 
+<!-- Hero con imagen y texto -->
 <div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
 
   <!-- Imagen de perfil -->
@@ -16,13 +17,13 @@ order: 1
   <div style="flex: 2; min-width: 250px;">
     <h1>👋 ¡Hola! Soy Exmojose</h1>
     <p>
-      Bienvenido a mi sitio personal. Soy un apasionado del <strong>desarrollo web</strong>, la <strong>tecnología</strong> y la creación de proyectos innovadores.  
+      Bienvenido a mi espacio personal. Soy un apasionado de la <strong>ciberseguridad</strong>, el <strong>pentesting</strong> y el <strong>desarrollo web</strong>.  
       Aquí comparto mis <strong>proyectos</strong>, <strong>tutoriales</strong> y <strong>experimentos</strong> para que otros aprendan y se inspiren.
     </p>
 
     <ul>
       <li>🚀 Proyectos destacados en <a href="https://github.com/exmojose">GitHub</a></li>
-      <li>📚 Tutoriales y artículos sobre programación y desarrollo web</li>
+      <li>📚 Tutoriales y artículos sobre seguridad informática y programación</li>
       <li>💡 Ideas y experimentos creativos</li>
       <li>🧪 Pruebas y proyectos personales</li>
     </ul>
@@ -35,4 +36,18 @@ order: 1
   </div>
 
 </div>
+
+<!-- Bloque tipo terminal estilo ciberseguridad -->
+## 🛡️ WhoAmI – Cyber Edition
+
+```bash
+$ id exmojose
+uid=1001(exmojose) gid=1001(security) groups=1001(security),1002(pentest),1003(devops)
+home=/home/exmojose shell=/bin/bash
+roles=cybersecurity_enthusiast, penetration_tester, ethical_hacker
+skills="Python, Bash, Networking, Pentesting, Kali Linux, Wireshark, Metasploit"
+certifications="CEH, OSCP"
+status="Always learning & hacking responsibly 🚀"
+location="España, Madrid"
+
 
