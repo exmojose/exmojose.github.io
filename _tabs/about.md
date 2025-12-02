@@ -1,5 +1,6 @@
 ---
 # the default layout is 'page'
+title: "Sobre mí"
 icon: fas fa-user
 order: 1
 ---
