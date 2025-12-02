@@ -13,22 +13,25 @@ hero: false   # <- desactiva la cabecera automática de Chirpy
   <!-- Texto de presentación -->
   <div class="hero-text">
     <h1>👋 ¡Hola! Soy Jose</h1>
-    <p>
-      Soy Jose, apasionado del mundo de la <strong>tecnología</strong> y la <strong>ciberseguridad</strong>. Actualmente cuento con las siguientes certificaciones:
+    <p class="intro-text">
+      Apasionado del mundo de la <strong>tecnología</strong> y la <strong>ciberseguridad</strong>, en constante aprendizaje y compartiendo conocimientos con la comunidad.
     </p>
 
-    <ul>
-      <li>🎓 eJPT</li>
-      <li>🎓 eWPT</li>
-      <li>🎓 eCPPT</li>
-    </ul>
+    <div class="certifications">
+      <h2>🎓 Certificaciones</h2>
+      <ul>
+        <li>eJPT</li>
+        <li>eWPT</li>
+        <li>eCPPT</li>
+      </ul>
+    </div>
 
-    <p>
-      En este espacio encontrarás <strong>artículos de ciberseguridad</strong>, <strong>resoluciones paso a paso de CTFs</strong>, <strong>reviews de certificaciones</strong> y todo lo que he ido aprendiendo durante este apasionante viaje.  
-      Mi objetivo es combinar <strong>experiencia técnica</strong> y <strong>pasión por enseñar</strong> para aportar valor real a la comunidad.
+    <p class="description">
+      Aquí encontrarás <strong>artículos de ciberseguridad</strong>, <strong>resoluciones paso a paso de CTFs</strong>, <strong>reviews de certificaciones</strong> y todo lo que he aprendido durante este apasionante viaje.  
+      Mi objetivo es combinar <strong>experiencia técnica</strong> con <strong>pasión por enseñar</strong> para aportar valor real a la comunidad.
     </p>
 
-    <p>
+    <p class="contact">
       🌐 Podéis contactarme en Redes Sociales:  
       <a href="https://www.linkedin.com/in/exmojose">LinkedIn</a> | 
       <a href="https://github.com/exmojose">GitHub</a>
@@ -39,30 +42,71 @@ hero: false   # <- desactiva la cabecera automática de Chirpy
 
 <style>
 .hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  margin-bottom: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
 }
 
 .hero-text {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 650px;
 }
 
-.hero-text ul {
+.intro-text {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.certifications h2 {
+  margin-bottom: 0.5rem;
+}
+
+.certifications ul {
   list-style: none;
   padding: 0;
-  margin-top: 1rem;
-  text-align: left;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.certifications li {
+  background: #f0f0f0;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact a {
+  color: #0077b5;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.5rem;
+  transition: color 0.2s;
+}
+
+.contact a:hover {
+  color: #005582;
 }
 </style>
