@@ -1,16 +1,18 @@
----
-title: "Whoami"
-icon: fas fa-user-shield
-order: 1
----
-
 <!-- Hero con imagen y texto -->
-<div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
+<div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
 
-  <!-- Imagen de perfil -->
+  <!-- Imagen de perfil y certificaciones -->
   <div style="flex: 1; min-width: 250px;">
     <img src="/assets/img/avatar.jpg" alt="Exmojose" 
          style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+    
+    <!-- Certificaciones -->
+    <div style="margin-top: 1rem; padding: 0.75rem 1rem; background-color: #f0f4ff; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+      <strong>Certificaciones:</strong>
+      <span style="display: inline-block; margin: 0.25rem 0.5rem; padding: 0.25rem 0.5rem; background-color: #dbeafe; border-radius: 6px;">eJPT</span>
+      <span style="display: inline-block; margin: 0.25rem 0.5rem; padding: 0.25rem 0.5rem; background-color: #dbeafe; border-radius: 6px;">eCPPT</span>
+      <span style="display: inline-block; margin: 0.25rem 0.5rem; padding: 0.25rem 0.5rem; background-color: #dbeafe; border-radius: 6px;">eWPT</span>
+    </div>
   </div>
 
   <!-- Texto de presentación -->
@@ -36,14 +38,5 @@ order: 1
   </div>
 
 </div>
-
-<!-- Bloque tipo terminal estilo ciberseguridad -->
-
-```bash
-$ id exmojose
-uid=1001(exmojose) gid=1001(security) groups=1001(security),1002(pentest),1003(devops)
-home=/home/exmojose shell=/bin/bash
-```
-
 
 
