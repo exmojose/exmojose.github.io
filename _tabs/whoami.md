@@ -2,10 +2,8 @@
 title: "Whoami"
 icon: fas fa-user-shield
 order: 1
+hero: false   # <- desactiva la cabecera automática de Chirpy
 ---
-
-<!-- Ocultar el título de la página -->
-<h1 class="visually-hidden">Whoami</h1>
 
 <div class="hero-container">
 
@@ -37,14 +35,6 @@ order: 1
 </div>
 
 <style>
-.visually-hidden {
-  position: absolute !important;
-  height: 1px; width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap; /* evitar que el texto se muestre */
-}
-
 .hero-container {
   text-align: center;
   margin-bottom: 2rem;
@@ -73,4 +63,5 @@ order: 1
   display: inline-block;
 }
 </style>
+
 
