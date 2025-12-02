@@ -12,23 +12,26 @@ hero: false   # <- desactiva la cabecera automática de Chirpy
 
   <!-- Texto de presentación -->
   <div class="hero-text">
-    <h1>👋 ¡Hola! Soy Exmojose</h1>
+    <h1>👋 ¡Hola! Soy Jose</h1>
     <p>
-      Bienvenido a mi espacio personal. Soy un apasionado de la <strong>ciberseguridad</strong>, el <strong>pentesting</strong> y el <strong>desarrollo web</strong>.  
-      Aquí comparto mis <strong>proyectos</strong>, <strong>tutoriales</strong> y <strong>experimentos</strong> para que otros aprendan y se inspiren.
+      Soy Jose, apasionado del mundo de la <strong>tecnología</strong> y la <strong>ciberseguridad</strong>. Actualmente cuento con las siguientes certificaciones:
     </p>
 
     <ul>
-      <li>🚀 Proyectos destacados en <a href="https://github.com/exmojose">GitHub</a></li>
-      <li>📚 Tutoriales y artículos sobre seguridad informática y programación</li>
-      <li>💡 Ideas y experimentos creativos</li>
-      <li>🧪 Pruebas y proyectos personales</li>
+      <li>🎓 eJPT</li>
+      <li>🎓 eWPT</li>
+      <li>🎓 eCPPT</li>
     </ul>
 
     <p>
-      🌐 Sígueme en: 
-      <a href="https://github.com/exmojose">GitHub</a> | 
-      <a href="https://twitter.com/exmojose">Twitter</a>
+      En este espacio encontrarás <strong>artículos de ciberseguridad</strong>, <strong>resoluciones paso a paso de CTFs</strong>, <strong>reviews de certificaciones</strong> y todo lo que he ido aprendiendo durante este apasionante viaje.  
+      Mi objetivo es combinar <strong>experiencia técnica</strong> y <strong>pasión por enseñar</strong> para aportar valor real a la comunidad.
+    </p>
+
+    <p>
+      🌐 Podéis contactarme en Redes Sociales:  
+      <a href="https://www.linkedin.com/in/exmojose">LinkedIn</a> | 
+      <a href="https://github.com/exmojose">GitHub</a>
     </p>
   </div>
 
@@ -63,5 +66,3 @@ hero: false   # <- desactiva la cabecera automática de Chirpy
   display: inline-block;
 }
 </style>
-
-
