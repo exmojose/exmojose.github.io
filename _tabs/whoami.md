@@ -1,3 +1,9 @@
+---
+title: "Whoami"
+icon: fas fa-user-shield
+order: 1
+---
+
 <!-- Hero con imagen y texto -->
 <div style="display: flex; align-items: flex-start; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem;">
 
@@ -38,5 +44,4 @@
   </div>
 
 </div>
-
 
