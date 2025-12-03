@@ -166,11 +166,11 @@ exclude:
   - "package*.json"
 
 jekyll-archives:
-  enabled: [categories, tags]
+  enabled: [tags]            # Quitamos 'categories' para que no aparezca Blog automáticamente
   layouts:
     category: category
     tag: tag
-  permalinks
+  permalinks:
     tag: /tags/:name/
     category: /categories/:name/
 
