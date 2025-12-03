@@ -1,6 +1,6 @@
 ---
 title: Writeups
-layout: home        # Layout que lista automáticamente posts por categoría
+layout: page        # Layout que lista automáticamente posts por categoría
 permalink: /writeups/   # URL de la página
 category: writeups      # Filtra posts con esta categoría
 order: 1                # Posición en la barra de navegación
