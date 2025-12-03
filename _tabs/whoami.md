@@ -12,9 +12,9 @@ hero: false
 
   <!-- Texto de presentación -->
   <div class="hero-text">
-    <h1>👋 ¡Hola! Soy Jose</h1>
+    <h1>👋 ¡Hola! </h1>
     <p class="intro-text">
-      Apasionado del mundo de la <strong>tecnología</strong> y la <strong>ciberseguridad</strong>, en constante aprendizaje y compartiendo conocimientos con la comunidad.
+      Soy Jose, apasionado del mundo de la tecnología y la Ciberseguridad. Actualmente cuento con las siguientes certificaciones:
     </p>
 
     <div class="certifications">
@@ -27,8 +27,7 @@ hero: false
     </div>
 
     <p class="description">
-      Aquí encontrarás <strong>artículos de ciberseguridad</strong>, <strong>resoluciones paso a paso de CTFs</strong>, <strong>reviews de certificaciones</strong> y todo lo que he aprendido durante este apasionante viaje.  
-      Mi objetivo es combinar <strong>experiencia técnica</strong> con <strong>pasión por enseñar</strong> para aportar valor real a la comunidad.
+      En este espacio encontrarás artículos de <strong>ciberseguridad, resoluciones paso a paso de CTFs, reviews de certificaciones, apuntes </strong> y todo lo que he ido aprendiendo durante este apasionante viaje. Mi objetivo es combinar experiencia técnica y pasión por enseñar para aportar valor real a la comunidad.
     </p>
 
     <p class="contact">
