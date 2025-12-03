@@ -1,6 +1,6 @@
 ---
 title: Posts
-layout: posts
+layout: page
 permalink: /post/
 icon: fas fa-archive
 order: 999
