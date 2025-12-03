@@ -173,3 +173,12 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+
+nav_order:
+  - whoami
+  - blog
+  - posts
+  - etiquetas
+  - tags
+  - categories
