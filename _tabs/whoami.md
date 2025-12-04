@@ -7,8 +7,10 @@ hero: false
 
 <div class="hero-container">
 
-  <!-- Imagen de perfil -->
-  <img src="/assets/img/autor.png" alt="Foto de perfil de Exmojose" class="profile-pic">
+  <!-- Imagen de perfil con lightbox simple -->
+  <a href="/assets/img/autor.png" class="profile-lightbox">
+    <img src="/assets/img/autor.png" alt="Foto de perfil de Exmojose" class="profile-pic">
+  </a>
 
   <!-- Texto de presentación -->
   <div class="hero-text">
@@ -83,17 +85,33 @@ hero: false
   padding: 1rem;
 }
 
+/* Imagen de perfil centrada y mostrando más la cara */
 .profile-pic {
   width: 180px;
   height: 180px;
   object-fit: cover;
+  object-position: center 35%; /* ajusta para mostrar más la cara */
   border-radius: 50%;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  margin-bottom: 1.5rem;
+  margin: 0 auto 1.5rem auto; /* centrado horizontal */
+  display: block;
   transition: transform 0.3s ease;
 }
+
 .profile-pic:hover {
   transform: scale(1.05);
+}
+
+/* Lightbox simple: clic para abrir más pequeña */
+.profile-lightbox img {
+  cursor: zoom-in;
+}
+
+.profile-lightbox:focus img,
+.profile-lightbox:active img {
+  width: 250px; /* tamaño más pequeño que full screen */
+  height: auto;
+  outline: none;
 }
 
 .hero-text {
@@ -170,5 +188,6 @@ hero: false
   font-weight: bold;
 }
 </style>
+
 
 
