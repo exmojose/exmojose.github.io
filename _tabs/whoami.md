@@ -16,22 +16,23 @@ hero: false
     <h1>¡Hola!</h1>
 
     <p class="intro-text">
-      Desde mi bunker digital me presento: Soy José <strong>(exmojose)</strong> y te doy la bienvenida a este espacio de aprendizaje y curiosidad.  
-      Aquí comparto mis experiencias resolviendo laboratorios CTF (Writeups), reviews de certificaciones, artículos de ciberseguridad y todo aquello que voy descubriendo en el lado ofensivo de la ciber.
+      Desde mi bunker digital me presento: Soy José <strong>(exmojose)</strong> y bienvenido a este espacio de curiosidad y aprendizaje. Pasa, ponte cómodo y siéntete libre de echar un vistazo a todo lo que tengo por aquí. 
+      Aquí comparto mis experiencias resolviendo laboratorios CTF (Writeups), reviews de certificaciones, artículos de ciberseguridad y todo aquello que voy descubriendo mientras exploro el lado ofensivo de la ciber.
     </p>
 
     <p class="intro-text">
-      Me apasiona la ciberseguridad, el hacking ético y la divulgación técnica.  
-      Fuera de mis obligaciones laborales, disfruto investigando nuevas técnicas ofensivas, participando en CTFs y colaborando con comunidades para seguir creciendo.
+      Me apasiona la ciberseguridad, el hacking ético y la divulgación.  
+      Fuera de mis obligaciones laborales, disfruto investigando nuevas técnicas ofensivas, participando en CTFs y colaborando con comunidades para seguir creciendo en el sector.
     </p>
 
     <p class="intro-text">
-      Me encuentro en un proceso constante de aprendizaje, ampliando conocimientos mediante cursos, certificaciones y errores (que luego se convierten en experiencia).  
-      Mi camino autodidacta me ha enseñado que los errores son lecciones disfrazadas de retos, y que todo se supera con curiosidad y trabajo.
+      Me encuentro en un proceso constante de aprendizaje, ampliando conocimientos y habilidades mediante cursos, certificaciones y errores, que luego se convierten en valiosas experiencias.  
+      Mi camino como autodidacta me ha enseñado que los errores son simplemente lecciones disfrazadas de retos, y que pueden superarse con dos componentes: curiosidad y trabajo. 
+      Acualmente cuento con las siguientes certificaciones:
     </p>
 
     <div class="certifications">
-      <h2>🎓 Certificaciones</h2>
+      <h2> Certificaciones</h2>
 
       <div class="cert-images">
         <figure>
@@ -60,8 +61,10 @@ hero: false
     </p>
 
     <p class="contact">
-      🌐 Puedes encontrarme en:  
-      <a href="https://www.linkedin.com/in/exmojose" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+        Puedes conctactar conmigo en Linkedin 
+      <a href="https://www.linkedin.com/in/exmojose" rel="noopener noreferrer" target="_blank" class="social-icon">
+        <i class="fab fa-linkedin"></i>
+      </a>
     </p>
 
   </div>
@@ -142,15 +145,15 @@ hero: false
   opacity: 0.85;
 }
 
-.contact a {
+.social-icon i {
+  font-size: 1.8rem;
   color: #0077b5;
-  text-decoration: none;
-  font-weight: bold;
-  margin-left: 0.3rem;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
-.contact a:hover {
+
+.social-icon i:hover {
   color: #005582;
+  transform: scale(1.15);
 }
 
 .thanks {
@@ -158,3 +161,4 @@ hero: false
   font-weight: bold;
 }
 </style>
+
