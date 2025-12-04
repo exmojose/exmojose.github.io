@@ -28,7 +28,7 @@ hero: false
     <p class="intro-text">
       Me encuentro en un proceso constante de aprendizaje, ampliando conocimientos y habilidades mediante cursos, certificaciones y errores, que luego se convierten en valiosas experiencias.  
       Mi camino como autodidacta me ha enseñado que los errores son simplemente lecciones disfrazadas de retos, y que pueden superarse con dos componentes: curiosidad y trabajo. 
-      Acualmente cuento con las siguientes certificaciones:
+      Actualmente cuento con las siguientes certificaciones:
     </p>
 
     <div class="certifications">
@@ -61,7 +61,7 @@ hero: false
     </p>
 
     <p class="contact">
-        Puedes conctactar conmigo en Linkedin 
+        Puedes contactar conmigo en LinkedIn 
       <a href="https://www.linkedin.com/in/exmojose" rel="noopener noreferrer" target="_blank" class="social-icon">
         <i class="fab fa-linkedin"></i>
       </a>
