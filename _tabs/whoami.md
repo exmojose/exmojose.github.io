@@ -150,16 +150,21 @@ hero: false
 }
   
 .social-icon i {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #0077b5;
+  background: #e6f0f8;
   padding: 8px;
   border-radius: 50%;
-  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
 }
 
 .social-icon i:hover {
   color: #005582;
-  transform: scale(1.15);
+  background: #d4e6f3;
+  transform: scale(1.1);
 }
 
 .thanks {
