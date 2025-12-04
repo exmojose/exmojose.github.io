@@ -145,9 +145,15 @@ hero: false
   opacity: 0.85;
 }
 
+.social-icon {
+  text-decoration: none;
+}
+  
 .social-icon i {
   font-size: 1.8rem;
   color: #0077b5;
+  padding: 8px;
+  border-radius: 50%;
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
