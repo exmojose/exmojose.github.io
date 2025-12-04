@@ -22,7 +22,7 @@ hero: false
 
     <p class="intro-text">
       Me apasiona la ciberseguridad, el hacking ético y la divulgación.  
-      Fuera de mis obligaciones laborales, disfruto investigando nuevas técnicas ofensivas, participando en CTFs y colaborando con comunidades para seguir creciendo en el sector.
+      Aislado a mis obligaciones laborales, disfruto investigando nuevas técnicas ofensivas, participando en CTFs y colaborando con comunidades para seguir creciendo en el sector.
     </p>
 
     <p class="intro-text">
@@ -69,7 +69,7 @@ hero: false
 
   </div>
 
-  <p class="thanks">¡Muchas gracias por tu visita!</p>
+  <p class="thanks">¡Muchas gracias por tu visita! br> ❤️ </p>
 
 </div>
 
