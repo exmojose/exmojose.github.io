@@ -76,7 +76,7 @@ cdn: ""
 
 # Avatar y social preview
 avatar: /assets/img/avatar.jpg
-social_preview_image: /assets/img/social-preview.jpg
+social_preview_image: /assets/img/autor.png
 
 # Table of contents
 toc: true
