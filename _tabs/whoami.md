@@ -36,7 +36,7 @@ hero: false
 
       <div class="cert-images">
         <figure>
-          <img src="/assets/img/ejpt.jpg" alt="Certificación eJPT" title="eJPT">
+          <img src="/assets/img/ejpt.png" alt="Certificación eJPT" title="eJPT">
           <figcaption>eJPT</figcaption>
         </figure>
 
