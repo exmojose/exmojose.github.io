@@ -90,7 +90,7 @@ hero: false
   width: 180px;
   height: 180px;
   object-fit: cover;
-  object-position: center 35%; /* ajusta para mostrar más la cara */
+  object-position: center 50%; /* ajusta para mostrar más la cara */
   border-radius: 50%;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   margin: 0 auto 1.5rem auto; /* centrado horizontal */
@@ -109,7 +109,7 @@ hero: false
 
 .profile-lightbox:focus img,
 .profile-lightbox:active img {
-  width: 250px; /* tamaño más pequeño que full screen */
+  width: 120px; /* tamaño más pequeño que full screen */
   height: auto;
   outline: none;
 }
