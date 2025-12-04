@@ -14,7 +14,7 @@ timezone: Europe/Madrid
 
 title: exmojose # the main title
 
-tagline: | eJPT | eCPPT | eWPT  # subtitle
+tagline: | eJPT | eCPPT | eWPT | # subtitle
 
 description: >- # used by seo meta and the atom feed
   Blog personal de Exmojose — tecnología, proyectos, tutoriales y contenido creativo.
