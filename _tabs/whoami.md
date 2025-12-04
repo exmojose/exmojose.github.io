@@ -109,7 +109,7 @@ hero: false
 
 .profile-lightbox:focus img,
 .profile-lightbox:active img {
-  width: 90px; /* tamaño más pequeño que full screen */
+  width: 35px; /* tamaño más pequeño que full screen */
   height: auto;
   outline: none;
 }
