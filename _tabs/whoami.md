@@ -88,7 +88,7 @@ hero: false
 /* Imagen de perfil centrada y mostrando más la cara */
 .profile-pic {
   width: 293px;
-  height: 180px;
+  height: 211px;
   object-fit: cover;
   object-position: center 5%; /* ajusta para mostrar más la cara */
   border-radius: 9%;
