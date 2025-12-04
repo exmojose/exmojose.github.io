@@ -8,7 +8,7 @@ hero: false
 <div class="hero-container">
 
   <!-- Imagen de perfil -->
-  <img src="/assets/img/avatar.jpg" alt="Foto de perfil de Exmojose" class="profile-pic">
+  <img src="/assets/img/autor.png" alt="Foto de perfil de Exmojose" class="profile-pic">
 
   <!-- Texto de presentación -->
   <div class="hero-text">
