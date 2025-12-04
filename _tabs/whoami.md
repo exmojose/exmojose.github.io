@@ -13,7 +13,7 @@ hero: false
   <!-- Texto de presentación -->
   <div class="hero-text">
 
-    <h1>¡Hola!</h1>
+    <h1>👋¡Hola!</h1>
 
     <p class="intro-text">
       Desde mi bunker digital me presento: Soy José <strong>(exmojose)</strong> y bienvenido a este espacio de curiosidad y aprendizaje. Pasa, ponte cómodo y siéntete libre de echar un vistazo a todo lo que tengo por aquí. 
