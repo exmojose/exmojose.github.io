@@ -69,7 +69,7 @@ hero: false
 
   </div>
 
-  <p class="thanks">¡Muchas gracias por tu visita! br> ❤️ </p>
+  <p class="thanks">¡Muchas gracias por tu visita! <br> ❤️ </p>
 
 </div>
 
