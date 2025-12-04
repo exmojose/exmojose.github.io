@@ -73,5 +73,93 @@ hero: false
 
 </div>
 
+<style>
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+  line-height: 1.6;
+}
+
+.certifications h2 {
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+}
+
+.cert-images {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.cert-images figure {
+  text-align: center;
+}
+
+.cert-images img {
+  width: 120px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.cert-images img:hover {
+  transform: scale(1.05);
+}
+
+.cert-images figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.quote {
+  margin: 1.5rem 0;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.social-icon i {
+  font-size: 1.8rem;
+  color: #0077b5;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-icon i:hover {
+  color: #005582;
+  transform: scale(1.15);
+}
+
+.thanks {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+</style>
 
 
