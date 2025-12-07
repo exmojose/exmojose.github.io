@@ -91,7 +91,7 @@ hero: false
   height: 211px;
   object-fit: cover;
   object-position: center 5%; /* ajusta para mostrar más la cara */
-  border-radius: 9%;
+  border-radius: 6%;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   margin: 0 auto 1.5rem auto; /* centrado horizontal */
   display: block;
