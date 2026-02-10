@@ -34,7 +34,7 @@ hero: false
     </p>
 
     <div class="certifications">
-      <h2> Certificaciones</h2>
+      <h2>Certificaciones</h2>
 
       <div class="cert-images">
         <figure>
@@ -55,8 +55,7 @@ hero: false
         <figure>
           <img src="/assets/img/CWP.png" alt="Certificación CWP" title="CWP">
           <figcaption>CWP</figcaption>
-      </figure>
-        
+        </figure>
       </div>
     </div>
 
@@ -69,7 +68,7 @@ hero: false
     </p>
 
     <p class="contact">
-        Puedes contactar conmigo en LinkedIn 
+      Puedes contactar conmigo en LinkedIn 
       <a href="https://es.linkedin.com/in/jos%C3%A9-exp%C3%B3sito-molina-849550201" rel="noopener noreferrer" target="_blank" class="social-icon">
         <i class="fab fa-linkedin"></i>
       </a>
@@ -91,15 +90,14 @@ hero: false
   padding: 1rem;
 }
 
-/* Imagen de perfil centrada y mostrando más la cara */
 .profile-pic {
   width: 293px;
   height: 211px;
   object-fit: cover;
-  object-position: center 5%; /* ajusta para mostrar más la cara */
+  object-position: center 5%;
   border-radius: 6%;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-  margin: 0 auto 1.5rem auto; /* centrado horizontal */
+  margin: 0 auto 1.5rem auto;
   display: block;
   transition: transform 0.3s ease;
 }
@@ -108,14 +106,13 @@ hero: false
   transform: scale(1.05);
 }
 
-/* Lightbox simple: clic para abrir más pequeña */
 .profile-lightbox img {
   cursor: zoom-in;
 }
 
 .profile-lightbox:focus img,
 .profile-lightbox:active img {
-  width: 5px; /* tamaño más pequeño que full screen */
+  width: 5px;
   height: auto;
   outline: none;
 }
@@ -153,6 +150,7 @@ hero: false
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
+
 .cert-images img:hover {
   transform: scale(1.05);
 }
