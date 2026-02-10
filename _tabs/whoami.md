@@ -18,18 +18,18 @@ hero: false
     <h1>👋¡Hola!</h1>
 
     <p class="intro-text">
-      Desde mi bunker digital me presento: Soy José <strong>(exmojose)</strong> y bienvenido a este espacio de curiosidad y aprendizaje. Pasa, ponte cómodo y siéntete libre de echar un vistazo a todo lo que tengo por aquí. 
-      Aquí comparto mis experiencias resolviendo laboratorios CTF (Writeups), reviews de certificaciones, artículos de ciberseguridad y todo aquello que voy descubriendo mientras exploro el lado ofensivo de la ciber.
+      Desde mi bunker digital me presento: Soy José <strong>(exmojose)</strong> y te doy la bienvenida a este espacio de curiosidad y aprendizaje. Pasa, ponte cómodo y siéntete libre de echar un vistazo a todo lo que tengo por aquí. 
+      En este sitio comparto mis experiencias resolviendo laboratorios CTF (Writeups), reviews de certificaciones, artículos de ciberseguridad y todo lo que voy descubriendo mientras exploro el lado ofensivo de la seguridad informática.
     </p>
 
     <p class="intro-text">
-      Me apasiona la ciberseguridad, el hacking ético y la divulgación.  
-      Aislado a mis obligaciones laborales, disfruto investigando nuevas técnicas ofensivas, participando en CTFs y colaborando con comunidades para seguir creciendo en el sector.
+      Me apasiona la ciberseguridad, el hacking ético y la divulgación técnica.  
+      Aislado a mis obligaciones laborales, disfruto investigando nuevas técnicas ofensivas, participando en CTFs y colaborando con comunidades para seguir creciendo profesionalmente en el sector.
     </p>
 
     <p class="intro-text">
-      Me encuentro en un proceso constante de aprendizaje, ampliando conocimientos y habilidades mediante cursos, certificaciones y errores, que luego se convierten en valiosas experiencias.  
-      Mi camino como autodidacta me ha enseñado que los errores son simplemente lecciones disfrazadas de retos, y que pueden superarse con dos componentes: curiosidad y trabajo. 
+      Me encuentro en un proceso constante de aprendizaje, ampliando conocimientos y habilidades mediante cursos, certificaciones... y también errores, que una vez asimilados se convierten en valiosas experiencias.  
+      Mi camino como autodidacta me ha enseñado que los errores son simplemente lecciones disfrazadas de retos, y que pueden superarse con tres componentes: curiosidad, trabajo y constancia. 
       Actualmente cuento con las siguientes certificaciones:
     </p>
 
@@ -59,12 +59,12 @@ hero: false
     </blockquote>
 
     <p class="intro-text">
-      Espero que encuentres aquí algo útil, interesante o que despierte tu curiosidad. Si es así, habrá valido la pena.
+      Espero que encuentres aquí algo útil, interesante o que despierte tu curiosidad. Si es así, este proyecto ya habrá valido la pena
     </p>
 
     <p class="contact">
         Puedes contactar conmigo en LinkedIn 
-      <a href="https://www.linkedin.com/in/exmojose" rel="noopener noreferrer" target="_blank" class="social-icon">
+      <a href="https://es.linkedin.com/in/jos%C3%A9-exp%C3%B3sito-molina-849550201" rel="noopener noreferrer" target="_blank" class="social-icon">
         <i class="fab fa-linkedin"></i>
       </a>
     </p>
