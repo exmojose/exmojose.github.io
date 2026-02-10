@@ -28,7 +28,7 @@ hero: false
     </p>
 
     <p class="intro-text">
-      Me encuentro en un proceso constante de aprendizaje, ampliando conocimientos y habilidades mediante cursos, certificaciones... y también errores, que una vez asimilados se convierten en valiosas experiencias.  
+      Me encuentro en un proceso de aprendizaje constante, ampliando conocimientos y habilidades mediante cursos, certificaciones... y también errores, que una vez asimilados se convierten en valiosas experiencias.  
       Mi camino como autodidacta me ha enseñado que los errores son simplemente lecciones disfrazadas de retos, y que pueden superarse con tres componentes: curiosidad, trabajo y constancia. 
       Actualmente cuento con las siguientes certificaciones:
     </p>
@@ -51,6 +51,12 @@ hero: false
           <img src="/assets/img/ecppt.png" alt="Certificación eCPPT" title="eCPPT">
           <figcaption>eCPPT</figcaption>
         </figure>
+
+        <figure>
+          <img src="/assets/img/CWP.png" alt="Certificación CWP" title="CWP">
+          <figcaption>CWP</figcaption>
+      </figure>
+        
       </div>
     </div>
 
