@@ -1,5 +1,5 @@
 ---
-title: "Expressway - HackTheBox"
+title: "Expressway"
 date: 2026-03-08 13:25:00 +0100
 categories: [Writeups]
 tags: [Hackthebox, easy, Linux]
