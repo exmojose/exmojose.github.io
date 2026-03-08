@@ -1,5 +1,5 @@
 ---
-title: "Writeup Expressway - HackTheBox"
+title: "Expressway - HackTheBox"
 date: 2026-03-08 13:25:00 +0100
 categories: [Writeups]
 tags: [Hackthebox, easy, Linux]
@@ -147,7 +147,7 @@ En este caso no es necesario realizar un tratamiento de la TTY. Simplemente si e
 
 ```bash
 export TERM=xterm
-``
+```
 
 ![Captura de pantalla 9](/assets/img/expressway_ctf/14.jpg)
 
