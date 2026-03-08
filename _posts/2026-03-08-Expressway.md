@@ -1,8 +1,8 @@
 ---
 title: "Expressway"
 date: 2026-03-08 13:25:00 +0100
-categories: [Writeups]
-tags: [Hackthebox, easy, Linux]
+categories: [writeups]
+tags: [easy, Linux]
 image:
   path: /assets/img/expressway.png
   alt: "Expressway"
