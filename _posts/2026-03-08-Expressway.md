@@ -1,6 +1,6 @@
 ---
 title: "Writeup Expressway - HackTheBox"
-date: 2026-03-08 14:00:00 +0100
+date: 2026-03-08 13:25:00 +0100
 categories: [Writeups]
 tags: [Hackthebox, easy, Linux]
 image:
