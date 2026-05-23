@@ -10,7 +10,7 @@ image:
   h: 630      # Alto real (ratio típico 1.91:1) — recomendado por Chirpy
 ---
 
-# Imagery
+# MonitorsFour
 En esta máquina trataremos principalmente los siguientes puntos. 
 
 | Contenido |
