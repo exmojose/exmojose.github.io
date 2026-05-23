@@ -1,6 +1,6 @@
 ---
 title: "MonitorsFour"
-date: 2026-05-23 21:00:00 +0100
+date: 2026-05-23 20:00:00 +0100
 categories: [writeups]
 tags: [HTB, TypeJuggingAttack, PHP, Hash, Burpsuite, Easy, Windows]
 image:
